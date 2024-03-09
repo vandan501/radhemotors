@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Website title -->
+    <title>Radhe Motors | About us</title>
+
+    <!-- Title image  -->
+    <link rel="icon" href="./Images/radhe_logo.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,500;1,700;1,800&family=Roboto:wght@100;300;400;500;700;900&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link of fontawasome website for icons -->
+    <script
+      src="https://kit.fontawesome.com/267448ee0a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Linked Style.css page for designing of HTML -->
+    <link rel="stylesheet" href="Style.css" />
+
+    <!-- internal css -->
+    <style>
+      .aboutus {
+        width: 100%;
+        height: min-content;
+        background-color: #ffffff;
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        column-gap: 90px;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+      .aboutcard {
+        display: flex;
+        background-color: aliceblue;
+        border: 7px solid rgb(156, 6, 6);
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0px;
+        gap: 40px;
+        border-radius: 25px;
+        padding: 40px;
+        animation-name: link-text;
+        animation-duration: 2s;
+        transform: rotateY(-1000%);
+        transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
+      }
+      @keyframes link-text {
+        0% {
+          transform: translateY(-1000%);
+        }
+        90% {
+          transform: translateY(50%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      .leftpart {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(1, 46, 88);
+        color: white;
+        border-radius: 30%;
+        flex-wrap: wrap;
+        width: 600px;
+        height: min-content;
+        cursor: pointer;
+        padding: 25px;
+        box-shadow: 1px 1px 10px black;
+        align-items: center;
+        justify-content: center;
+      }
+      .leftpart:hover {
+        background-color: rgb(15, 77, 135);
+        color: azure;
+        box-shadow: 1px 1px 8px black;
+      }
+
+      .leftpart h2 {
+        color: yellow;
+        font-size: 45px;
+        text-align: center;
+        margin: 30px;
+      }
+      .leftpart p {
+        text-align: justify;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 10px;
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+
+      .rightpart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 400px;
+      }
+      .img {
+        width: 400px;
+        height: 300px;
+        border-radius: 30px;
+      }
+      img:hover {
+        scale: 0.9;
+        transition: all 0.5s ease-in-out;
+      }
+      /* Media query for small devices (phones) */
+      @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 768px) {
+          .img {
+            width: 250px;
+            height: 200px;
+            border-radius: 30px;
+          }
+          img:hover {
+            scale: 0.9;
+            transition: all 0.5s ease-in-out;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NavBar -->
+    <header class="header">
+      <nav class="navbar">
+        <div>
+          <a href="#" class="nav-logo">
+            <img id="mainlogo" src="./Images/radhe_logo.png" alt="" />
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="aboutus.html" class="nav-link">About </a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="product.html" class="nav-link">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="second-hand-cars.html" class="nav-link"
+              >Second Hand Cars</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="feedback.html" class="nav-link">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.us.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <!-- end of nav bar -->
+
+    <!-- about us section -->
+
+    <section class="aboutus">
+      <div class="aboutcard">
+        <div class="leftpart">
+          <h2>Who We Are</h2>
+          <p>
+            At Radhe Auto Sales, we are not just another garage; we are a
+            family-driven business with a passion for cars and a commitment to
+            delivering exceptional automotive services.
+            <b> Established by Mr. Jay Bareja,</b> our garage has been a
+            cornerstone of the Indian automotive industry for 35 years.
+          </p>
+        </div>
+
+        <div class="rightpart">
+          <img
+            class="img"
+            src="https://images.pexels.com/photos/8985662/pexels-photo-8985662.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="aboutcard">
+        <div class="rightpart">
+          <img
+            class="img"
+            src="https://images.pexels.com/photos/8985463/pexels-photo-8985463.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+          />
+        </div>
+
+        <div class="leftpart">
+          <h2>Our Expertise</h2>
+          <p>
+            What sets us apart is our comprehensive range of services. From
+            selling top-quality car parts for all Indian car brands and models
+            to providing meticulous car modifications, we are your one-stop
+            destination for all things automotive. Our expertise extends to
+            dealing in pre-owned cars, ensuring that every vehicle leaving our
+            showroom meets the highest standards of quality and reliability.
+          </p>
+        </div>
+      </div>
+
+      <div class="aboutcard">
+        <div class="leftpart">
+          <h2>Why Choose Radhe Auto Sales</h2>
+          <ul>
+            <li>
+              <p>
+                <i class="fa-regular fa-star"></i> <b> Quality Car Parts:</b> We
+                source and sell only genuine car parts to ensure the longevity
+                and performance of your vehicle.
+              </p>
+            </li>
+            <li>
+              <p>
+                <i class="fa-regular fa-star"></i>
+                <b>Expert Modifications:</b> Our skilled technicians bring
+                innovation and precision to every car modification project.
+              </p>
+            </li>
+            <li>
+              <p>
+                <i class="fa-regular fa-star"></i>
+                <b> Pre-Owned Cars with a Guarantee:</b> Explore our range of
+                pre-owned cars, each thoroughly inspected to meet our high
+                standards.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rightpart">
+          <img
+            class="img"
+            src="https://images.pexels.com/photos/5233258/pexels-photo-5233258.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <hr />
+    <footer class="footer">
+      <div>
+        <img class="footer-logo" src="./Images/radhe_logo.png" alt="" />
+        <p class="copy" style="color: white">
+          &copy; 2024 Radhe Auto Sales. All rights reserved.
+        </p>
+        <p class="copy">Email id:info@radheautosales.com</p>
+        <p class="copy">Contact no:+91 xx-xxx-xxxx</p>
+        <p class="copy"></p>
+      </div>
+      <div class="footer1">
+        <ul class="footer-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="aboutus.html" class="nav-link">About </a></li>
+
+          <li><a href="product.html" class="nav-link">Products</a></li>
+          <li><a href="contact.us.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer2">
+        <ul class="footer-menu">
+          <li>
+            <a href="second-hand-cars.html" class="nav-link"
+              >second hand cars</a
+            >
+          </li>
+          <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+
+          <li><a href="second-hand-cars.html" class="nav-link">Services</a></li>
+          <li><a href="#" class="nav-link">Terms and Conditions</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- end of footer section -->
+
+    <!-- javascript file attached for DOM or other operations -->
+    <script src="script.js"></script>
+  </body>
+</html>

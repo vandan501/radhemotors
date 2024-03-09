@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Website title -->
+    <title>Radhe Motors</title>
+
+    <!-- Title image  -->
+    <link rel="icon" href="./Images/radhe_logo.ico" type="image/x-icon" />
+
+    <!-- For Apply Animation  when scroll-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,500;1,700;1,800&family=Roboto:wght@100;300;400;500;700;900&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Link of fontawasome website for icons -->
+    <script
+      src="https://kit.fontawesome.com/267448ee0a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Linked Style.css page for designing of HTML -->
+    <link rel="stylesheet" href="./Style.css" />
+    <style>
+      img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        height: 100%;
+      }
+      video {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        height: 100%;
+      }
+      .contaner {
+        display: flex;
+        .item {
+          flex: 1 1 100%;
+        }
+        .item + .item {
+          padding-left: 10px;
+        }
+        .item-flex {
+          display: flex;
+          flex-direction: column;
+        }
+        .item-flex {
+          img + img {
+            margin-top: 10px;
+          }
+        }
+        .item-flex-img {
+          height: 40%;
+        }
+        .item-flex-img-big {
+          height: 60%;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 768px) {
+          img {
+            width: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            height: 100%;
+          }
+          video {
+            width: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            height: 100%;
+          }
+          .contaner {
+            display: flex;
+            .item {
+              flex: 1 1 100%;
+            }
+            .item + .item {
+              padding-left: 10px;
+            }
+            .item-flex {
+              display: flex;
+              flex-direction: column;
+            }
+            .item-flex {
+              img + img {
+                margin-top: 10px;
+              }
+            }
+            .item-flex-img {
+              height: 40%;
+            }
+            .item-flex-img-big {
+              height: 60%;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header of website -->
+    <header class="header">
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <a href="#" class="nav-logo">
+            <img id="mainlogo" src="./Images/radhe_logo.png" alt="" />
+          </a>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="aboutus.html" class="nav-link">About </a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="product.html" class="nav-link">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="second-hand-cars.html" class="nav-link"
+              >Second Hand Cars</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.us.html" class="nav-link">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="customer_login.php" class="nav-link">login</a>
+          </li>
+
+          <!-- END OF LOGIN HOVER -->
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <!-- end of Header section -->
+
+    <!-- main section -->
+    <section class="main-section">
+      <video
+        src="./pexels-pavel-danilyuk-6157984 (1080p).mp4"
+        loop
+        autoplay
+        muted
+        class="bg-video"
+      ></video>
+      <div>
+        <div class="main-section1">
+          <h1
+            class="main-heading animate__animated animate__fadeInUp"
+            id="main-heading-msg"
+          >
+            Welcome to Radhe Auto Sales
+          </h1>
+          <h2 class="main-subheading animate__animated animate__fadeInUp">
+            Your Destination for Quality Auto Solutions.
+          </h2>
+          <button
+            class="button"
+            style="vertical-align: middle; background-color: red"
+          >
+            <span
+              ><a id="send" href="./Customer_register.html">register now</a>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- end of main section -->
+
+    <!-- service section -->
+    <section class="service-section">
+      <div class="services">
+        <h1 class="main-heading">Why Choose Us</h1>
+        <h2 class="main-subheading">
+          We Offer Full Service Auto Repair & Maintenance
+        </h2>
+        <div class="service-img">
+          <!-- <div>
+            <img class="img-service" src="./Images/image1.jpg" alt="" />
+          </div>
+
+          <div>
+            <img class="img-service" src="./Images/image2.jpg" alt="" />
+          </div>
+
+          <div>
+            <img class="img-service" src="./Images/image3.jpg" alt="" />
+          </div>
+          <div>
+            <img class="img-service" src="./Images/image4.jpg" alt="" />
+          </div> -->
+          <div class="contaner">
+            <div class="item">
+              <video
+                src="./production_id_4488723 (2160p).mp4"
+                loop
+                muted
+                autoplay
+              ></video>
+            </div>
+            <div class="item item-flex">
+              <img class="item-flex-img-big" src="./Images/image2.jpg" alt="" />
+              <img class="item-flex-img" src="./Images/image3.jpg" alt="" />
+            </div>
+            <div class="item item-flex">
+              <img class="item-flex-img" src="./Images/image4.jpg" alt="" />
+              <img
+                class="item-flex-img-big"
+                src="./Images/image1.jpg"
+                id="display-img"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of service section -->
+
+    <!-- Company brand sliders -->
+    <section class="company-brand">
+      <h1 class="main-heading">Brands We Service</h1>
+      <div class="slider">
+        <div class="slide-track">
+          <div class="slide">
+            <img src="./Images/tata_logo.jpg" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img
+              src="./Images/mahindra logo.png"
+              height="100"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="./Images/Maruti-Suzuki-Logo.png"
+              height="100"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="./Images/mahindra logo.png"
+              height="100"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="./Images/hyundai-logo.svg"
+              height="100"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="slide">
+            <img src="./Images/tata_logo.jpg" height="100" width="250" alt="" />
+          </div>
+
+          <div class="slide">
+            <img
+              src="./Images/honda car logo.png"
+              height="100"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="./Images/Kia car logo.jpg"
+              height="100"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="./Images/renault logo.jpeg"
+              height="100"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="./Images/toyota image.webp"
+              height="100"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="./Images/mahindra logo.png"
+              height="100"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="./Images/hyundai-logo.svg"
+              height="100"
+              width="250"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of company brand slinders -->
+
+    <!-- mission and vision section -->
+    <section class="vision-mission">
+      <div class="vision">
+        <h1>Vision</h1>
+        <h2>Driving Excellence, Inspiring Journeys</h2>
+        <p>
+          At Radhe Auto Sales, our vision is to be the driving force behind an
+          automotive experience that transcends expectations. We aspire to
+          become the preferred destination for car enthusiasts, where
+          innovation, quality, and customer satisfaction converge. In the
+          ever-evolving landscape of the automotive industry, we envision Radhe
+          Auto Sales as a symbol of trust, expertise, and passion.
+        </p>
+      </div>
+      <div class="mission">
+        <h1>Mission</h1>
+        <h2 style="text-align: center">Committed to Your Automotive Journey</h2>
+
+        <ol>
+          <li>
+            <span>Quality Assurance: </span>
+            <i class="fa-solid fa-square-check"></i>
+            Providing genuine and top-notch car parts to ensure the longevity
+            and performance of every vehicle.
+          </li>
+          <li>
+            <span>Innovative Modifications: </span>
+            <i class="fa-solid fa-square-check"></i>
+            Bringing creativity and precision to car modifications, tailoring
+            each project to meet our customers' unique desires and
+            specifications.
+          </li>
+          <li>
+            <span> Trustworthy Pre-Owned Cars:</span>
+            <i class="fa-solid fa-square-check"></i>
+            Offering a curated selection of pre-owned cars, rigorously inspected
+            and guaranteed for quality, reliability, and performance.
+          </li>
+          <li>
+            <span>Customer-Centric Approach:</span>
+            <i class="fa-solid fa-square-check"></i>
+            Building lasting relationships with our customers by prioritizing
+            their needs, providing transparent communication, and ensuring a
+            seamless experience at every touchpoint.
+          </li>
+          <li>
+            <span>Embracing Technological Advancements:</span>
+            <i class="fa-solid fa-square-check"></i>
+            Embracing the latest technologies to enhance our services,
+            streamline processes, and stay at the forefront of the automotive
+            industry.
+          </li>
+          <li>
+            <span>Community Engagement:</span>
+            <i class="fa-solid fa-square-check"></i>
+
+            Actively engaging with the automotive community, fostering a culture
+            of knowledge-sharing, and contributing to the growth and development
+            of the industry.
+          </li>
+        </ol>
+      </div>
+    </section>
+    <!-- end of mission nd vision section -->
+
+    <!-- Customers feedback -->
+    <section class="customer-feedback">
+      <h1 class="main-heading" style="position: relative; top: -50px">
+        Satisfied Voices
+      </h1>
+      <div class="our-feedbacks">
+        <div class="feedback-card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp7KDHp7I2cygvnPE1TJpNGgxktd-h3B1kZw&usqp=CAU"
+            alt=""
+          />
+          <h2>Kamlesh Patel</h2>
+          <i id="cmt" class="fa-solid fa-comments"></i>
+          <p>
+            Exceptional car service at Radhe Auto Sales! From the moment I
+            walked in, the staff was welcoming and knowledgeable. The
+            technicians were thorough in their inspection, and my car was
+            returned in pristine condition. I appreciate the attention to detail
+            and prompt service. Radhe Auto Sales is my go-to for all car needs!"
+          </p>
+        </div>
+        <div class="feedback-card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp7KDHp7I2cygvnPE1TJpNGgxktd-h3B1kZw&usqp=CAU"
+            alt=""
+          />
+          <h2>Paresh vyash</h2>
+          <i id="cmt" class="fa-solid fa-comments"></i>
+          <p>
+            "I can't praise Radhe Auto Sales enough for their top-notch car
+            service. The team is not only skilled but also genuinely cares about
+            customer satisfaction. They went above and beyond to address an
+            unexpected issue with my vehicle, and their communication throughout
+            the process was excellent. Highly recommended"
+          </p>
+        </div>
+
+        <div class="feedback-card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp7KDHp7I2cygvnPE1TJpNGgxktd-h3B1kZw&usqp=CAU"
+            alt=""
+          />
+          <h2>Narayan Pariyaani</h2>
+          <i id="cmt" class="fa-solid fa-comments"></i>
+          <p>
+            "Radhe Auto Sales sets the standard for excellent car service. The
+            mechanics are highly trained, and the service is efficient. What I
+            appreciate the most is their transparency – no hidden fees or
+            unnecessary repairs. Trustworthy and reliable, I confidently
+            recommend Radhe Auto Sales to fellow car owners."
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- end of customer feedback -->
+
+    <!-- Footer section -->
+    <hr />
+    <footer class="footer">
+      <div>
+        <img class="footer-logo" src="./Images/radhe_logo.png" alt="" />
+        <p class="copy" style="color: white">
+          &copy; 2024 Radhe Auto Sales. All rights reserved.
+        </p>
+        <p class="copy">Email id:info@radheautosales.com</p>
+        <p class="copy">Contact no:+91 xx-xxx-xxxx</p>
+        <p class="copy"></p>
+      </div>
+      <div class="footer1">
+        <ul class="footer-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="aboutus.html" class="nav-link">About </a></li>
+
+          <li><a href="product.html" class="nav-link">Products</a></li>
+          <li><a href="contact.us.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer2">
+        <ul class="footer-menu">
+          <li>
+            <a href="second-hand-cars.html" class="nav-link"
+              >second hand cars</a
+            >
+          </li>
+          <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="#" class="nav-link">Terms and Conditions</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- end of footer section -->
+
+    <!-- javascript file attached for DOM or other operations -->
+    <script src="script.js"></script>
+  </body>
+</html>

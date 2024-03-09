@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Website title -->
+    <title>Radhe Motors | old cars details</title>
+
+    <!-- Title image  -->
+    <link rel="icon" href="./Images/radhe_logo.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,500;1,700;1,800&family=Roboto:wght@100;300;400;500;700;900&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link of fontawasome website for icons -->
+    <script
+      src="https://kit.fontawesome.com/267448ee0a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Linked Style.css page for designing of HTML -->
+    <link rel="stylesheet" href="Style.css" />
+
+    <!-- internal css -->
+    <style>
+      /* for large screens */
+      .second-hand-cars {
+        width: 100%;
+        height: min-content;
+        padding: 40px;
+        flex-direction: column;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .car-details-cards {
+        display: flex;
+        margin: 30px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        animation-name: link-text;
+        animation-duration: 2s;
+        transform: rotateX(-1000%);
+        transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
+      }
+      @keyframes link-text {
+        0% {
+          transform: translateX(-1000%);
+        }
+        90% {
+          transform: translateX(50%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .car-img {
+        width: 400px;
+        height: 200px;
+      }
+
+      /* table css */
+      table,
+      tr,
+      td {
+        border-collapse: collapse;
+        border: 2px solid black;
+        padding: 8px;
+      }
+      thead {
+        background-color: rgb(1, 46, 88);
+        color: black;
+      }
+      th {
+        font-weight: 500;
+        padding: 5px;
+      }
+      .heading-car {
+        font-size: 35px;
+        color: blueviolet;
+      }
+      table {
+        text-align: center;
+      }
+      /* Styling for odd rows */
+      tr:nth-child(odd) {
+        background-color: #f2f2f2;
+      }
+
+      /* Styling for even rows */
+      tr:nth-child(even) {
+        background-color: #ffffff;
+      }
+
+      /* for small screens */
+
+      @media only screen and (max-width: 601px) {
+        @media only screen and (max-width: 768px) {
+          tr {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+          }
+          th {
+            display: none;
+          }
+          marquee {
+            display: none;
+          }
+          .diff {
+            background-color: green;
+            color: white;
+            font-weight: 700;
+          }
+          .car-details-cards {
+            width: min-content;
+          }
+          table {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+
+      /* end of table css */
+    </style>
+  </head>
+  <body>
+    <!-- Header of website -->
+
+    <!-- NavBar -->
+    <header class="header">
+      <nav class="navbar">
+        <div>
+          <a href="#" class="nav-logo">
+            <img id="mainlogo" src="./Images/radhe_logo.png" alt="" />
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="aboutus.html" class="nav-link">About </a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="product.html" class="nav-link">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="second-hand-cars.html" class="nav-link"
+              >Second Hand Cars</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="feedback.html" class="nav-link">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.us.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <!-- end of nav bar -->
+
+    <!-- Cardetails section -->
+    <section class="second-hand-cars">
+      <h1 class="heading-car">Second Hand Cars</h1>
+      <marquee behavior="alternate" direction="left">
+        <h1>
+          Dear Customer The Price is negotiable.
+          <span style="background-color: green; color: white; padding: 5px">
+            inquiry now</span
+          >
+        </h1></marquee
+      >
+
+      <div class="car-details-cards">
+        <table border="1px">
+          <thead>
+            <th>Sr no.</th>
+            <th>Car Photos</th>
+            <th>Car Company</th>
+            <th>Car Model</th>
+            <th>Automatic/Manual</th>
+            <th>Asking Price</th>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="diff">1</td>
+              <td>
+                <img
+                  class="car-img"
+                  src="https://imgd.aeplcdn.com/370x208/n/cw/ec/139139/harrier-facelift-exterior-right-front-three-quarter-5.jpeg?isig=0&q=80"
+                  alt=""
+                />
+              </td>
+              <td>Tata Harrier</td>
+              <td>2021</td>
+              <td>Automatic</td>
+              <td>₹9,00,000</td>
+            </tr>
+
+            <tr>
+              <td class="diff">2</td>
+              <td>
+                <img
+                  class="car-img"
+                  src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Baleno/10497/1697697558001/front-left-side-47.jpg?tr=w-664"
+                  alt=""
+                />
+              </td>
+              <td>Maruti Suzuki Baleno</td>
+              <td>2020</td>
+              <td>Manual</td>
+              <td>₹7,50,000</td>
+            </tr>
+
+            <tr>
+              <td class="diff">3</td>
+              <td>
+                <img
+                  class="car-img"
+                  src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Grand-i10-Nios/Gallery%20Section/big/pc/niosgallery_3.jpg"
+                  alt=""
+                />
+              </td>
+              <td>Hyundai Grand i10</td>
+              <td>2019</td>
+              <td>Automatic</td>
+              <td>14,00,000</td>
+            </tr>
+
+            <tr>
+              <td class="diff">4</td>
+              <td>
+                <img
+                  class="car-img"
+                  src="data:image/jpeg;base64,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"
+                  alt=""
+                />
+              </td>
+              <td>Honda City</td>
+              <td>2017</td>
+              <td>Automatic</td>
+              <td>₹7,00,000</td>
+            </tr>
+
+            <tr>
+              <td class="diff">5</td>
+              <td>
+                <img
+                  class="car-img"
+                  src="https://imgd.aeplcdn.com/642x361/n/cw/ec/49595/mahindra-new-thar-bs6-left-front-three-quarter0.jpeg?wm=1&q=80"
+                  alt=""
+                />
+              </td>
+              <td>Mahindra Thar</td>
+              <td>2022</td>
+              <td>Manual</td>
+              <td>₹8,00,000</td>
+            </tr>
+
+            <tr>
+              <td class="diff">6</td>
+              <td>
+                <img
+                  class="car-img"
+                  src="https://www.quikr.com/cars-bikes/pitstop/wp-content/uploads/2016/02/Ford-Ecosport-used.jpg"
+                  alt=""
+                />
+              </td>
+              <td>Ford EcoSport</td>
+              <td>2019</td>
+              <td>Automatic</td>
+              <td>₹5,50,000</td>
+            </tr>
+
+            <tr>
+              <td class="diff">7</td>
+              <td>
+                <img
+                  class="car-img"
+                  src="https://5.imimg.com/data5/KV/TD/GLADMIN-6301434/renault-kwid-rxl-used-car-500x500.png"
+                  alt=""
+                />
+              </td>
+              <td>Renault Kwid</td>
+              <td>2021</td>
+              <td>Manual</td>
+              <td>₹4,50,000</td>
+            </tr>
+
+            <tr class="diff">
+              <td>8</td>
+              <td>
+                <img
+                  class="car-img"
+                  src="https://imgd.aeplcdn.com/640X480/cw/ucp/stockApiImg/XNPBE3G_7e72b7f9a19846f696a6cd45fe92818d_1_34173859.jpg?q=80"
+                  alt=""
+                />
+              </td>
+              <td>Toyota Fortuner</td>
+              <td>2019</td>
+              <td>Automatic</td>
+              <td>₹10,00,000</td>
+            </tr>
+
+            <tr>
+              <td class="diff">9</td>
+              <td>
+                <img
+                  class="car-img"
+                  src="https://www.team-bhp.com/forum/attachments/test-drives-initial-ownership-reports/2338163d1658738798-how-i-ended-up-getting-pre-owned-10-year-old-vw-polo-teach-my-daughter-driving-img_9468.jpg"
+                  alt=""
+                />
+              </td>
+              <td>Volkswagen Polo</td>
+              <td>2015</td>
+              <td>Manual</td>
+              <td>₹6,00,000</td>
+            </tr>
+
+            <!-- Add more rows if needed -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- end of cardetails section -->
+
+    <hr />
+    <!-- footer section -->
+    <footer class="footer">
+      <div>
+        <img class="footer-logo" src="./Images/radhe_logo.png" alt="" />
+        <p class="copy" style="color: white">
+          &copy; 2024 Radhe Auto Sales. All rights reserved.
+        </p>
+        <p class="copy">Email id:info@radheautosales.com</p>
+        <p class="copy">Contact no:+91 xx-xxx-xxxx</p>
+        <p class="copy"></p>
+      </div>
+      <div class="footer1">
+        <ul class="footer-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="aboutus.html" class="nav-link">About </a></li>
+
+          <li><a href="product.html" class="nav-link">Products</a></li>
+          <li><a href="contact.us.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer2">
+        <ul class="footer-menu">
+          <li>
+            <a href="second-hand-cars.html" class="nav-link"
+              >second hand cars</a
+            >
+          </li>
+          <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+
+          <li><a href="second-hand-cars.html" class="nav-link">Services</a></li>
+          <li><a href="#" class="nav-link">Terms and Conditions</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- end of footer section -->
+
+    <!-- javascript file attached for DOM or other operations -->
+    <script src="script.js"></script>
+  </body>
+</html>

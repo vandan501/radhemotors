@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Website title -->
+    <title>Services</title>
+
+    <!-- Title image  -->
+    <link rel="icon" href="./Images/radhe_logo.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,500;1,700;1,800&family=Roboto:wght@100;300;400;500;700;900&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link of fontawasome website for icons -->
+    <script
+      src="https://kit.fontawesome.com/267448ee0a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Linked Style.css page for designing of HTML -->
+    <link rel="stylesheet" href="Style.css" />
+
+    <style>
+      .services-sec {
+        width: 100%;
+        height: min-content;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      h1 {
+        font-size: 50px;
+        text-align: center;
+        text-shadow: 1px 1px 5px black;
+      }
+      h1:hover {
+        color: rgb(54, 54, 5);
+      }
+      .card-container {
+        padding: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+        display: flex;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 30px;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px;
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        animation-name: link-text;
+        animation-duration: 2s;
+        transform: rotateY(-1000%);
+        transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
+      }
+      @keyframes link-text {
+        0% {
+          transform: translateX(-1000%);
+        }
+        90% {
+          transform: translateX(50%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .card:hover {
+        background-color: blanchedalmond;
+        scale: 0.9;
+        transition: all 0.5s ease-out;
+        box-shadow: 1px 5px 2px black;
+      }
+
+      .service-card-img {
+        width: 70px;
+        height: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header of website -->
+
+    <!-- NavBar -->
+    <header class="header">
+      <nav class="navbar">
+        <div>
+          <a href="#" class="nav-logo">
+            <img id="mainlogo" src="./Images/radhe_logo.png" alt="" />
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="aboutus.html" class="nav-link">About </a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="product.html" class="nav-link">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="second-hand-cars.html" class="nav-link"
+              >Second Hand Cars</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="feedback.html" class="nav-link">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.us.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <!-- end of nav bar -->
+
+    <!-- Service section -->
+
+    <section class="services-sec">
+      <h1>Our Services</h1>
+      <div class="card-container">
+        <div class="card">
+          <img class="service-card-img" src="./Images/diagnostics.svg" alt="" />
+          <h2>Diagnostics</h2>
+          <p>
+            If your car needs a mobile diagnostic check done at your home or
+            office, let AutoMechanica come to you.
+          </p>
+        </div>
+
+        <div class="card">
+          <img class="service-card-img" src="./Images/daint&paint.svg" alt="" />
+          <h2>Dent & Paint</h2>
+          <p>
+            AutoMechanica specializes in car dent repair and car painting
+            services for a range of models.
+          </p>
+        </div>
+
+        <div class="card">
+          <img class="service-card-img" src="./Images/oil.svg" alt="" />
+          <h2>Oil / Lube / Filters</h2>
+          <p>
+            AutoMechanica proudly serves the Lube, Oil & Filter change needs of
+            customers' vehicle performance while extending the life of your
+            vehicle.
+          </p>
+        </div>
+
+        <div class="card">
+          <img class="service-card-img" src="./Images/brakes.svg" alt="" />
+          <h2>Brakes</h2>
+          <p>
+            The brake system consists of different parts that can be fixed
+            individually. A detailed quote is given to you after we perform our
+            systematic brake evaluation.
+          </p>
+        </div>
+
+        <div class="card">
+          <img class="service-card-img" src="./Images/suspension.svg" alt="" />
+          <h2>Suspension</h2>
+          <p>
+            The suspension system of your vehicle protects you from bouncing up
+            and down due to the bad road conditions and bumps in the road.
+          </p>
+        </div>
+
+        <div class="card">
+          <img class="service-card-img" src="./Images/detailing.svg" alt="" />
+          <h2>Detailing</h2>
+          <p>
+            AutoMechanica offers professional car detail services at an
+            affordable price. Our interior cleaning, detailing, and restoration
+            services can help you recapture that new car look and smell.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+    <footer class="footer">
+      <div>
+        <img class="footer-logo" src="./Images/radhe_logo.png" alt="" />
+        <p class="copy" style="color: white">
+          &copy; 2024 Radhe Auto Sales. All rights reserved.
+        </p>
+        <p class="copy">Email id:info@radheautosales.com</p>
+        <p class="copy">Contact no:+91 xx-xxx-xxxx</p>
+        <p class="copy"></p>
+      </div>
+      <div class="footer1">
+        <ul class="footer-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="aboutus.html" class="nav-link">About </a></li>
+
+          <li><a href="product.html" class="nav-link">Products</a></li>
+          <li><a href="contact.us.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer2">
+        <ul class="footer-menu">
+          <li>
+            <a href="second-hand-cars.html" class="nav-link"
+              >second hand cars</a
+            >
+          </li>
+          <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+
+          <li><a href="second-hand-cars.html" class="nav-link">Services</a></li>
+          <li><a href="#" class="nav-link">Terms and Conditions</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- end of footer section -->
+
+    <!-- javascript file attached for DOM or other operations -->
+    <script src="script.js"></script>
+  </body>
+</html>

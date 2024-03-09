@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer registration | Radhe Motors</title>
+    <!-- Link of fontawasome website for icons -->
+    <script
+      src="https://kit.fontawesome.com/267448ee0a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- internal css -->
+    <style>
+      body {
+        background-color: rgb(1, 46, 88);
+        box-sizing: border-box;
+        margin: 0;
+        /* padding: 20%; */
+      }
+      h1 {
+        color: yellow;
+        font-size: 34px;
+      }
+      fieldset {
+        width: 70%;
+        text-align: center;
+        padding: 40px;
+        height: min-content;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 30px;
+      }
+      .cform-section {
+        display: flex;
+        flex-direction: column;
+        margin: auto 0;
+        width: auto;
+        height: min-content;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+      form {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        flex-direction: column;
+        padding: 5px;
+      }
+      label {
+        width: 100%;
+        font-size: 20px;
+        display: inline-block;
+        flex-shrink: inherit;
+        padding: 5px;
+        height: min-content;
+        border: none;
+        background-color: white;
+        border-radius: 5px;
+      }
+      a {
+        color: yellow;
+      }
+
+      input {
+        width: 100%;
+        font-size: 20px;
+        display: inline-block;
+        flex-shrink: inherit;
+        padding: 5px;
+        height: 25px;
+        border: none;
+        border-radius: 5px;
+      }
+      select {
+        width: 100%;
+        font-size: 20px;
+        display: inline-block;
+        flex-shrink: inherit;
+        padding: 5px;
+        height: 35px;
+        border: none;
+        border-radius: 5px;
+      }
+      textarea {
+        width: 100%;
+        font-size: 20px;
+        display: inline-block;
+        flex-shrink: inherit;
+        padding: 5px;
+        /* height: 35px; */
+        border: none;
+        border-radius: 5px;
+      }
+      input:hover {
+        background-color: whitesmoke;
+        font-weight: 600;
+      }
+      .dob {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+      }
+      #favcolor {
+        height: 35px;
+      }
+      .m_f {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      h2 {
+        color: white;
+        font-weight: 300;
+      }
+      [type="radio"] {
+        height: 20px;
+        width: 20px;
+      }
+      #submit {
+        background-color: green;
+        color: white;
+        padding: 5px;
+        height: 50px;
+        border-radius: 10%;
+        width: 160px;
+      }
+      #submit:hover {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="cform-section">
+      <fieldset>
+        <legend><h1>Customer Registration Page</h1></legend>
+        
+        <form action="insertCustomer.php" autocomplete="off" method="post">
+          <input
+            type="text"
+            required
+            name="c_fname"
+            id="c_fname"
+            placeholder="First Name"
+          />
+          <input
+            type="text"
+            required
+            name="c_lname"
+            id="c_lname"
+            placeholder="Last Name"
+          />
+          <div class="dob">
+            <div class="m_f">
+              <h2>Male</h2>
+              <input
+                type="radio"
+                required
+                name="gender"
+                id="gender"
+                value="Male"
+              />
+            </div>
+            <div class="m_f">
+              <h2>Female</h2>
+              <input type="radio" name="gender" id="gender" value="Male" />
+            </div>
+          </div>
+          <input
+            type="email"
+            required
+            name="c_email"
+            id="c_email"
+            placeholder="Email id"
+          />
+          <input
+            required
+            type="text"
+            name="c_password"
+            id="c_password"
+            placeholder="Password"
+            title="Password Should be strong"
+          />
+          <input
+            type="tel"
+            required
+            name="c_contact"
+            id="c_contact"
+            placeholder="Contact number"
+          />
+          <div class="dob">
+            <label for="c_dob"
+              >Date Of Birth &nbsp;<i class="fa-solid fa-arrow-right"></i>
+            </label>
+            <input
+              type="date"
+              name="c_dob"
+              required
+              id="c_dob"
+              placeholder="date of birth"
+            />
+          </div>
+          <div class="dob">
+            <label for="c_favCarColor"
+              >Your Favourite Car color &nbsp;<i
+                class="fa-solid fa-arrow-right"
+              ></i>
+            </label>
+            <input type="color" name="c_favCarColor" id="c_favCarColor" />
+          </div>
+          <select id="c_city" name="c_city" required>
+            <option value="" disabled selected>Select your city</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Surat">Surat</option>
+            <option value="Vadodara">Vadodara</option>
+            <option value="Rajkot">Rajkot</option>
+            <option value="Bhavnagar">Bhavnagar</option>
+            <option value="Jamnagar">Jamnagar</option>
+            <option value="Gandhinagar">Gandhinagar</option>
+            <option value="Junagadh">Junagadh</option>
+            <option value="Gandhidham">Gandhidham</option>
+            <option value="Anand">Anand</option>
+            <option value="Navsari">Navsari</option>
+            <option value="Morbi">Morbi</option>
+            <option value="Nadiad">Nadiad</option>
+            <option value="Surendranagar">Surendranagar</option>
+            <option value="Bharuch">Bharuch</option>
+          </select>
+          <textarea
+            name="c_address"
+            required
+            id="c_address"
+            cols="60"
+            rows="5"
+            placeholder="Enter Your Address"
+          ></textarea>
+          <input type="submit" name="submit" id="submit" />
+        </form>
+      </fieldset>
+      <h2>
+        Already Have An Account?
+        <a href="./Customer_login.php"> Login here </a>
+      </h2>
+      <h3><a href="./index.html"> Go to website</a></h3>
+    </section>
+  </body>
+</html>
