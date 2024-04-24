@@ -152,19 +152,19 @@ tr:hover {
         <div class="container">
         <h2>Product Details</h2>
         <?php
-            // Database connection parameters
-            $servername = "localhost";
-            $db_username = "root";
-            $db_password = "";
-            $db_name = "radhemotors";
+// Database connection parameters
+$servername = "localhost";
+$db_username = "root";
+$db_password = "";
+$db_name = "radhemotors";
 
-            // Create connection
-            $conn = new mysqli($servername, $db_username, $db_password, $db_name);
+// Create connection
+$conn = new mysqli($servername, $db_username, $db_password, $db_name);
 
-            // Check connection
-            if ($conn->connect_error) {
-                die("ERROR: Could not connect. " . $conn->connect_error);
-            }
+// Check connection
+if ($conn->connect_error) {
+    die("ERROR: Could not connect. " . $conn->connect_error);
+}
 
 // Fetch all products
 $sql = "SELECT * FROM products";
@@ -182,9 +182,16 @@ if ($result->num_rows > 0) {
         </tr>";
 
     while ($row = $result->fetch_assoc()) {
+        $imageSrc = $row['p_image'];
+        // Check if the image file exists
+        if (!file_exists($imageSrc)) {
+            // If the image file doesn't exist, use fallback image
+            $imageSrc = '../Images/404.png'; // Change 'fallback_image.jpg' to the path of your fallback image
+        }
+
         echo "<tr>
                 <td>{$row['p_id']}</td>
-                <td><img src='" . $row['p_image'] . "' alt='Product Image' style='max-width: 100px; max-height: 100px;'></td>
+                <td><img src='$imageSrc' alt='Product Image' style='max-width: 100px; max-height: 100px;'></td>
                 <td>{$row['p_company']}</td>
                 <td>{$row['p_Car_Name']}</td>
                 <td>{$row['p_partname']}</td>
@@ -196,12 +203,7 @@ if ($result->num_rows > 0) {
 } else {
     echo "No products found.";
 }
-            // Close connection
-            $conn->close();
-        ?>
-    </div>         
-     
-      </div>
-    </div>
-  </body>
-</html>
+
+// Close connection
+$conn->close();
+?>
