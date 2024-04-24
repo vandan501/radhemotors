@@ -125,7 +125,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "<div class='product-card'>
                 <form method='POST' action='checkoutpage.php'>
-                    <img src='{$row['p_image']}' alt='Product Image'>
+                    " . getImageHTML($row['p_image']) . "
                     <h3><b> Company Name </b> {$row['p_company']}</h3>
                     <h3> <b> Car Name: </b>{$row['p_Car_Name']}</h3>
                     <p><b>Part Name</b> {$row['p_partname']}</p>
@@ -138,30 +138,34 @@ if ($result->num_rows > 0) {
                     <input type='hidden' name='price' value='{$row['p_price']}'>
                     
                     <button type='submit' name='addToCart'>Add to Cart</button>
-                    <button type='submit' name='buyNow'>Buy Now</button>
+                    <button type='button' onclick='buyNow({$row['p_id']})'>Buy Now</button>
                 </form>
             </div>";
     }
 } else {
     echo "No products found.";
 }
-            $conn->close();
-        ?>
-    </div>
 
-    <script>
-        function addToCart(productId) {
-            // Implement add to cart functionality
-            alert(`Product added to cart. Product ID: ${productId}`);
-        }
+function getImageHTML($imagePath) {
+    // Check if the image exists
+    if (file_exists($imagePath)) {
+        // If the image exists, display it
+        return "<img src='$imagePath' alt='Product Image'>";
+    } else {
+        // If the image doesn't exist, render a default image
+        return "<img src='../Images/404.png' alt='Default Image'>";
+    }
+}
+?>
 
-        function buyNow(productId) {
-            // Display confirmation popup
-            if (confirm("Are you sure you want to buy this product?")) {
-                // Redirect to checkout page with the selected product ID
-                window.location.href = `checkoutpage.php?p_id=${productId}`;
-            }
+<script>
+    function buyNow(productId) {
+        // Display confirmation popup
+        if (confirm("Are you sure you want to buy this product?")) {
+            // Redirect to checkout page with the selected product ID
+            window.location.href = `checkoutpage.php?p_id=${productId}`;
         }
-    </script>
+    }
+</script>
 </body>
 </html>

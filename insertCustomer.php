@@ -22,7 +22,7 @@ $db_name = "radhemotors";
 // Create connection
 $conn = new mysqli($servername, $db_username, $db_password, $db_name);
 
-// Check connection-A
+// Check connection
 if ($conn->connect_error) {
     die("ERROR: Could not connect. " . $conn->connect_error);
 }
@@ -30,16 +30,16 @@ if ($conn->connect_error) {
 // Prepared statement to prevent SQL injection
 $sql = $conn->prepare("INSERT INTO customers (c_fname, c_lname, gender, c_email, c_password, c_contact, c_dob, c_favCarColor, c_city, c_address) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-$sql->bind_param("ssssisssss", $c_fname, $c_lname, $gender, $c_email, $c_password, $c_contact, $c_dob, $c_favCarColor, $c_city, $c_address);
+$sql->bind_param("ssssssssss", $c_fname, $c_lname, $gender, $c_email, $c_password, $c_contact, $c_dob, $c_favCarColor, $c_city, $c_address);
 
-// Execute the prepared statement--
+// Execute the prepared statement
 if ($sql->execute()) {
+    $conn->close();
     echo "<script>alert('Registration successful!')</script>";
-    header("Location:http://localhost/radhemotors/Customers/listproducts.php");
+    echo "<script>window.location.href = 'http://localhost/radhemotors/Customers/listproducts.php';</script>";
+    exit();
 } else {
     echo "ERROR: Could not able to execute $sql. " . $conn->error;
 }
 
-// Close connection
-$conn->close();
 ?>
