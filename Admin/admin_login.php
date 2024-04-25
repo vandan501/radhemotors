@@ -1,7 +1,7 @@
 <!-- <?php
     session_start();
     if(count($_POST)>0) {
-        $con = mysqli_connect('localhost','root','','radhemotors') or die('Unable To connect');
+        $con = mysqli_connect('localhost','vpatel3','2njxx2njxxb35l7b35l7','vpatel3shoppingcart') or die('Unable To connect');
         $result = mysqli_query($con,"SELECT * FROM admin WHERE a_email='" . $_POST["a_email"] . "' and a_password = '". $_POST["a_password"]."'");
         $row  = mysqli_fetch_array($result);
         if(is_array($row)) {
